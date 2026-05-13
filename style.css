@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #0f172a 100%);
+    min-height: 100vh;
+    color: #f1f5f9; /* Light text for dark background */
+    padding: 0 8%;
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo {
+    font-weight: 800;
+    color: #38bdf8; /* Cyan accent */
+    font-size: 1.1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #94a3b8;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a.active {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* Hero Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    gap: 40px;
+}
+
+.main-name {
+    font-size: 5rem;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.description {
+    max-width: 500px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 800;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* About Page Styles */
+.about-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.glass-flex {
+    display: flex;
+    gap: 24px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    flex: 1;
+    text-align: left;
+}
+
+.glass-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.tags span {
+    background: rgba(56, 189, 248, 0.1);
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .hero, .glass-flex { flex-direction: column; align-items: center; }
+    .hero-image img { width: 100%; height: auto; }
+}
+
+/* Contact Page Specifics */
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-subtitle {
+    color: #94a3b8;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.input-group input, 
+.input-group textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #38bdf8;
+}
+
+.info-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.social-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: #38bdf8;
+}
+
+/* Responsive for Contact */
+@media (max-width: 850px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+/* Projects Section Styles */
+.projects-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.projects-subtitle {
+    color: #94a3b8;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    padding: 0; /* Remove padding for image flush */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+}
+
+.project-img-placeholder {
+    width: 100%;
+    height: 200px;
+    background: rgba(56, 189, 248, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #38bdf8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info {
+    padding: 25px;
+    text-align: left;
+}
+
+.project-info h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.project-info p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: #ffffff;
+}
+/* Container for the images */
+.project-image-container {
+    width: 100%;
+    height: 220px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 24px 24px 0 0; /* Rounds the top corners to match card */
+}
+
+/* Style for the actual image */
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Zoom effect on hover */
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+/* Ensure card padding doesn't push the image away from the edges */
+.project-card {
+    padding: 0 !important;
+}
+
+.project-info {
+    padding: 25px;
+}
+/* Smooth fade-in utility */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
